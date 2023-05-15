@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './App.css'
 import artist from './assets/artist'
 
@@ -70,15 +70,15 @@ function UserSurveyForm() {
         <form onSubmit={handleSubmit}>
           <div className="form-box">
             <label htmlFor="name">Name:</label>
-            <input type="text" name="name" placeholder="name" value={name} onChange={e => setName(e.target.value)} />
+            <input type="text" name="name" placeholder="name" value={name} onChange={e => setName(e.target.value)} required/>
           </div>
           <div className="form-box">
             <label htmlFor="comment">Comment:</label>
-            <textarea name="comment" placeholder="comment" rows="10" value={comment} onChange={e => setComment(e.target.value)} />
+            <textarea name="comment" placeholder="comment" rows="10" value={comment} onChange={e => setComment(e.target.value)} required />
           </div>
           <div className="form-box">
             <label htmlFor="selectedRating"> Rating:</label>
-            <select name="selectedRating" value={rating} onChange={e => setRating(e.target.value)}>
+            <select name="selectedRating" value={rating} onChange={e => setRating(e.target.value)} required>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
