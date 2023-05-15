@@ -1,20 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
-const artist = {
-  name: "Eminem",
-  genre: "Hip-Hop",
-  imageUrl: "https://i.imgur.com/IE6Xlzt.jpeg",
-  description: "Marshall Bruce Mathers III (born October 17, 1972), known professionally as Eminem, is an American rapper, songwriter, and record producer. He is credited with popularizing hip hop in middle America and is critically acclaimed as one of the greatest rappers of all time. Eminem is one of the best-selling artists in music history, and easily one of rap's biggest crossover successes. He was the first white rapper since the Beastie Boys to garner both sales and critical respect, but his impact has exceeded this confining distinction. On sheer technical skills, Eminem is one of the greatest MCs of his generation: rapid, fluid, dexterous, and unpredictable, capable of pulling off long-form narratives or withering asides."
-};
-
+import artist from './assets/artist'
 
 function ArtistDetails() {
   return (
     <>
-      <h1>{artist.name} ({artist.genre})</h1>
+      <h1>{artist.name} ({artist.genre} Artist)</h1>
       <div className="artist-info">
         <img
           className="avatar"
@@ -23,25 +13,37 @@ function ArtistDetails() {
         />
         <p>{artist.description}</p>
       </div>
-
     </>
   )
 }
 
-function ArtistMusicDetails() {
+function ArtistMusicDetails({ idx }) {
   return (
-    <button>I'm a button</button>
+    <>
+      <div className="music-container">
+        <div className="music-details">
+          <img src={artist.music[idx].cover} alt={`${artist.music[idx].album} Cover`} />
+          <div className="music-content">
+            <h2>{artist.music[idx].name}</h2>
+            <h3>Album: {artist.music[idx].album}</h3>
+            <p>Release Date: {artist.music[idx].releaseDate}</p>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 
-
-
 function App() {
-  const [count, setCount] = useState(0)
+  const songComponents = [];
+  for (let i = 0; i < artist.music.length; i++) {
+    songComponents.push(<ArtistMusicDetails idx={i} />);
+  }
 
   return (
     <>
       <ArtistDetails />
+      {songComponents}
     </>
   )
 }
