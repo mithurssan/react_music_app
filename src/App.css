@@ -50,3 +50,11 @@
 .music-content p {
   margin-left: 10px;
 }
+
+.likeBtn {
+  margin-right: 30px;
+}
+
+.song-liked {
+  background: brown;
+}

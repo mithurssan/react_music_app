@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import artist from './assets/artist'
 
@@ -18,6 +19,13 @@ function ArtistDetails() {
 }
 
 function ArtistMusicDetails({ idx }) {
+  const [liked, setLiked] = useState(false);
+
+  const handleLike = (e) => {
+    setLiked(!liked);
+    e.target.classList.toggle("song-liked");
+  }
+
   return (
     <>
       <div className="music-container">
@@ -28,6 +36,11 @@ function ArtistMusicDetails({ idx }) {
             <h3>Album: {artist.music[idx].album}</h3>
             <p>Release Date: {artist.music[idx].releaseDate}</p>
           </div>
+          <button
+            className="likeBtn"
+            type="submit"
+            onClick={handleLike}
+          >{liked ? "Unlike" : "Like"}</button>
         </div>
       </div>
     </>
