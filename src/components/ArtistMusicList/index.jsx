@@ -30,7 +30,6 @@ const ArtistMusicList = () => {
     <>
       {
         albumDetails.map((albumDetails, idx) => {
-          console.log(albumDetails)
           return <ArtistMusicDetails key={idx} artistAlbum={albumDetails} />
         })
       }
