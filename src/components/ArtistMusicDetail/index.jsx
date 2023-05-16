@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ArtistMusicDetails({ artistMusic }) {
+function ArtistMusicDetails({ artistAlbum }) {
     const [liked, setLiked] = useState(false);
 
     const handleLike = (e) => {
@@ -12,11 +12,9 @@ function ArtistMusicDetails({ artistMusic }) {
         <>
             <div className="music-container">
                 <div className="music-details">
-                    <img src={artistMusic.cover} alt={`${artistMusic.album} Cover`} />
                     <div className="music-content">
-                        <h2>{artistMusic.name}</h2>
-                        <h3>Album: {artistMusic.album}</h3>
-                        <p>Release Date: {artistMusic.releaseDate}</p>
+                        <h2>Album: {artistAlbum.title}</h2>
+                        <p>Release Date: {artistAlbum["first-release-date"]}</p>
                     </div>
                     <button
                         className="likeBtn"
