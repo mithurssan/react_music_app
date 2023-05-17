@@ -18,7 +18,7 @@ const NavBar = () => {
         <ul className="nav-links">
           <li><NavLink style={navA} to="/">Home</NavLink></li>
           <li><NavLink style={navA} to="/albums">Albums</NavLink></li>
-          <li>Form</li>
+          <li><NavLink style={navA} to="/feedback">Feedback</NavLink></li>
         </ul>
       </nav>
       <Outlet />

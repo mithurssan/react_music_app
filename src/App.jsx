@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<NavBar />}>
           <Route index element={<Pages.Home />} />
           <Route path="/albums" element={<Pages.Albums />} />
+          <Route path="/feedback" element={<Pages.Feedback />} />
         </Route>
       </Routes>
 

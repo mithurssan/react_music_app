@@ -1,0 +1,36 @@
+.form-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .form-container form {
+    width: 50%;
+    border: 2px solid black;
+    position: relative;
+    font-size: 20px;
+    background-color: #3e3e3e;
+    padding: 65px 35px;
+    border-radius: 20px;
+  }
+  
+  .form-box {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    justify-content: end;
+    margin-right: 25px;
+    width: 10%;
+    display: flex;
+  }
+  
+  .form-box input,
+  .form-box textarea {
+    width: 600px;
+  }
+  

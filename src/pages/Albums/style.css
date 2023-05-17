@@ -1,0 +1,36 @@
+.music-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.music-details {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 75%;
+    background: rgb(61, 61, 61);
+}
+
+.music-details img {
+    height: 200px;
+    border-radius: 20px 0 0 20px;
+}
+
+.music-content {
+    width: 100%;
+    align-items: center;
+}
+
+.music-content p {
+    margin-left: 10px;
+}
+
+.likeBtn {
+    margin-right: 30px;
+}
+
+.song-liked {
+    background: brown;
+}

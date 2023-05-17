@@ -11,88 +11,12 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-}
-
-h1,
-h2 {
-  font-family: 'Alegreya', serif;
-}
-
-body {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
 
-.music-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.music-details {
-  display: flex;
-  align-items: center;
-  border: 2px solid black;
-  border-radius: 20px;
-  width: 75%;
-  background: rgb(61, 61, 61);
-}
-
-.music-details img {
-  height: 200px;
-  border-radius: 20px 0 0 20px;
-}
-
-.music-content {
-  width: 100%;
-  align-items: center;
-}
-
-.music-content p {
-  margin-left: 10px;
-}
-
-.likeBtn {
-  margin-right: 30px;
-}
-
-.song-liked {
-  background: brown;
-}
-
-.form-container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.form-container form {
-  width: 50%;
-  border: 2px solid black;
-  position: relative;
-  font-size: 20px;
-  background-color: #3e3e3e;
-  padding: 65px 35px;
-  border-radius: 20px;
-}
-
-.form-box {
-  width: 100%;
-  display: flex;
-  margin-bottom: 15px;
-}
-
-form label {
-  justify-content: end;
-  margin-right: 25px;
-  width: 10%;
-  display: flex;
-}
-
-.form-box input,
-.form-box textarea {
-  width: 600px;
+h1,
+h2 {
+  font-family: 'Alegreya', serif;
 }
