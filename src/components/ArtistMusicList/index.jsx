@@ -21,7 +21,7 @@ const ArtistMusicList = () => {
       const colours = ["blue", "yellow", "red", "green", "purple"];
       const randomColour = colours[Math.floor(Math.random() * colours.length)];
       document.body.style.backgroundColor = randomColour;
-    }, 5000)
+    }, 30000)
     return () => clearInterval(timer)
   }, [])
 

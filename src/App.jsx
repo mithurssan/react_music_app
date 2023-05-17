@@ -1,14 +1,19 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { NavBar } from './layout';
+import * as Pages from "./pages";
 import './App.css'
-import artist from './assets/artist'
-import { ArtistDetail, ArtistMusicList, UserForm } from './components';
 
 function App() {
   return (
-    <>
-      <ArtistDetail artistName={artist.eminem.name} artistGenre={artist.eminem.genre} artistImg={artist.eminem.imageUrl} artistDesc={artist.eminem.description} />
-      <ArtistMusicList/>
-      <UserForm />
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<NavBar />}>
+          <Route index element={<Pages.Home />} />
+        </Route>
+      </Routes>
+
+    </div>
   )
 }
 

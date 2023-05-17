@@ -1,25 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Alegreya&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
   text-align: center;
 }
 
-.avatar {
-  width: 500px;
-  height: 300px;
-  border-radius: 50%;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.artist-info {
-  display: flex;
-  margin-bottom: 50px;
+h1,
+h2 {
+  font-family: 'Alegreya', serif;
 }
 
-.artist-info p {
-  text-align: justify;
-  font-size: 20px;
-  margin-left: 25px;
+body {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 }
 
 .music-container {
