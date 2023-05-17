@@ -1,8 +1,9 @@
 import React from 'react'
+import { ArtistMusicList } from "../../components";
 
 const Albums = () => {
   return (
-    <div>Albums</div>
+    <ArtistMusicList />
   )
 }
 

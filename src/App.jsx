@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Pages.Home />} />
+          <Route path="/albums" element={<Pages.Albums />} />
         </Route>
       </Routes>
 
