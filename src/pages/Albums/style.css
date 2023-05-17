@@ -9,8 +9,9 @@
     align-items: center;
     border: 2px solid black;
     border-radius: 20px;
-    width: 75%;
-    background: rgb(61, 61, 61);
+    width: 50%;
+    padding: 10px;
+    background-color: #494949;
 }
 
 .music-details img {
@@ -28,7 +29,11 @@
 }
 
 .likeBtn {
+    padding: 10px;
+    border-radius: 10px;
     margin-right: 30px;
+    border: none;
+    cursor: pointer;
 }
 
 .song-liked {
