@@ -36,6 +36,10 @@
     cursor: pointer;
 }
 
+.likeBtn:hover {
+    background-color: rgb(173, 60, 60);
+}
+
 .song-liked {
     background: brown;
 }
