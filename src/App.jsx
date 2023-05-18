@@ -22,6 +22,7 @@ function App() {
           <Route index element={<Pages.Home />} />
           <Route path="/albums" element={<Pages.Albums />} />
           <Route path="/feedback" element={<Pages.Feedback />} />
+          <Route path="*" element={<Pages.NotFound />} />
         </Route>
       </Routes>
     </div>
