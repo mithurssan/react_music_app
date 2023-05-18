@@ -13,7 +13,7 @@ function ArtistMusicDetails({ artistAlbum }) {
             <div className="music-container">
                 <div className="music-details">
                     <div className="music-content">
-                        <h2>Album: {artistAlbum.title}</h2>
+                        <h2>{artistAlbum.title}</h2>
                         <p>Release Date: {artistAlbum["first-release-date"]}</p>
                     </div>
                     <button
