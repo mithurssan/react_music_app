@@ -1,0 +1,21 @@
+.mr10 {
+    margin-right: 10px;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+.auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-form {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(84, 83, 83);
+    border: 2px solid white;
+}

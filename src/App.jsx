@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./routes"
+import { AuthProvider } from "./contexts"
 import { NavBar } from './layout';
 import * as Pages from "./pages";
 import './App.css'
@@ -17,14 +19,19 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route index element={<Pages.Home />} />
-          <Route path="/albums" element={<Pages.Albums />} />
-          <Route path="/feedback" element={<Pages.Feedback />} />
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<ProtectedRoute redirectTo="/login" />}>
+            <Route element={<NavBar />}>
+              <Route index element={<Pages.Home />} />
+              <Route path="/albums" element={<Pages.Albums />} />
+              <Route path="/feedback" element={<Pages.Feedback />} />
+            </Route>
+          </Route>
+          <Route path="/login" element={<Pages.Login />} />
           <Route path="*" element={<Pages.NotFound />} />
-        </Route>
-      </Routes>
+        </Routes>
+      </AuthProvider>
     </div>
   )
 }
